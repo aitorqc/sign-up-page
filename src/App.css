@@ -1,38 +1,100 @@
+input:focus,
+button:focus {
+    outline: none;
+}
+
 .App {
-  text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.RegisterFormContainer {
+    width: 500px;
+    height: 550px;
+    padding: 80px;
+    background-color: #2a2e45;
+    box-shadow: 0px 0px 20px 0px #32322c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.RegisterContainerHeadline {
+    text-align: center;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.RegisterForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.TextInput {
+    height: 50px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    align-self: stretch;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TextInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Opens Sans", sans-serif;
+}
+
+.TouCheckboxLabel {
+    margin-left: 20px;
+    vertical-align: bottom;
+    font-family: "Opens Sans", sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+.TouCheckbox {
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    margin-right: 10px;
+    margin-left: -20px;
+    background-color: #59a96a;
+}
+
+.RegisterForm button {
+    height: 60px;
+    width: 100%;
+    padding: 15px 32px;
+    margin-top: 40px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    background-color: #db5461;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .3);
+}
+
+.RegisterForm button:active {
+    transform: scale(.9);
+    transition-duration: 100ms;
+}
+
+.Disabled {
+    background-color: rgba(255, 255, 255, .2) !important;
+    color: rgba(255, 255, 255, .7) !important;
+}
+
+.Disabled:active {
+    transform: none !important;
 }
